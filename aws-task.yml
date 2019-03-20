@@ -6,6 +6,8 @@ image_resource:
     repository: briandfrost/concourse-ubuntu
     tag: latest 
 inputs:
-  - name: bit-bucket
+  - name: git
 run:
-  path: bit-bucket/pcf_automation/aws-checker/aws-cert-output.sh
+  path: git/conf/aws-cert-output-py.sh
+outputs: 
+  - name : confluence

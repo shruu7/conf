@@ -1,28 +1,42 @@
 resources:
-- name: bit-bucket
+- name: git-test
   type: git
   source:
     branch: master
-    uri: git@bitbucket.org:sonicdrivein/infra.git
-    private_key: ((git_private_key))
+    uri: git@github.com:shruu7/conf.git
+
 - name: monthly
   type: time
   source: 
     interval: 720h
+
 jobs:
-- name: aws-checker
+- name: aws-checker-sandbox
   plan:
-  - get: bit-bucket
+  - get: git-test
   - get: monthly
     trigger: true  
-  - task: check_expiry_date
-    file: bit-bucket/pcf_automation/aws-checker/aws-task.yml
+  - task: check_expiry_date_sandbox
+    file: git-test/conf/aws-task.yml
     params:
       AWS_ACCESS_KEY_ID: ((access-key-id))
       AWS_SECRET_ACCESS_KEY: ((secret-access-key))
       Envi: ((envi))
-      Username: ((Username-conf))
-      Password: ((Password-conf))
-      id: ((page-id-conf))
-      url: ((url-conf))
-      key: ((key-conf))
+      inputs: 
+      - name: confluence
+  - task: check_expiry_date_nonprod
+    file: git-test/conf/aws-task.yml
+    params: 
+      AWS_ACCESS_KEY_ID: ((access-key-id))
+      AWS_SECRET_ACCESS_KEY: ((secret-access-key))
+      Envi: ((envi))
+      inputs: 
+      - name: confluence
+  - task: check_expiry_date_prod
+    file: git-test/conf/aws-task.yml
+    params: 
+      AWS_ACCESS_KEY_ID: ((access-key-id))
+      AWS_SECRET_ACCESS_KEY: ((secret-access-key))
+      Envi: ((envi)) 
+      inputs: 
+      - name: confluence  
