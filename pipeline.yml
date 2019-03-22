@@ -5,7 +5,7 @@ resources:
   source:
     branch: master
     uri: git@github.com:shruu7/conf.git
-    private_key: |
+    private_key: |-
       -----BEGIN RSA PRIVATE KEY-----
       MIIEowIBAAKCAQEAvejFaGIoxUxuQuGVVMHjbEbZ8a4JCesPHaqeDgvzx7iLgRQu
       4GFeJOq0m8/gVbDVcR70iRVK9UquTgBVPPxxj8gY4jJ+0d9gJVdP8v4aueNG6mUf
