@@ -5,34 +5,7 @@ resources:
   source:
     branch: master
     uri: git@github.com:shruu7/conf.git
-    private_key: |-
-      -----BEGIN RSA PRIVATE KEY-----
-      MIIEowIBAAKCAQEAvejFaGIoxUxuQuGVVMHjbEbZ8a4JCesPHaqeDgvzx7iLgRQu
-      4GFeJOq0m8/gVbDVcR70iRVK9UquTgBVPPxxj8gY4jJ+0d9gJVdP8v4aueNG6mUf
-      TrVuI++9C5CtIAPD2B4nUvtXSWjiFubrbFsfeCMP14mAGBgflOZPEo499Eki90CX
-      8ftuEp79eI75PzftQ0aoy9AN1/YbZvrXAP3g9m+fIobc5OLc9sGIl41hSJyDwatY
-      JMT0lI9qiqBs7sX7uttdSyypN/ZEi1Yz7oLTwoCb5jd2J0CZVUKDEt5U/3+jQD2i
-      mIFgMsd6CN2StfKbRSjsAugtlFeqFoXAJ7ZYvwIDAQABAoIBAQCKTybGmQa8eqer
-      CgPqELODPi6od2mZ0ZnWr1YhQM8w29SuE3b4b7FTDaSv/buSbRFmK3dJBzrqXpOH
-      t3Jc0jYa005cHw6B5z9ssqRFgo8QZthVCYS9nCE1BvsVmy6bLGLL2Vomc2rkygAv
-      UcqPxeWrZ024WinyYk9N8FYSW4n/iKmlR08gbcHFQbei2GjdhwGC372g+fbUNPfL
-      zRBKwy0z3IZ6Yv+ZJVF02o9BD77c75qeNribyMQTdLJFPikUPfBE6PFAWMAvyp/T
-      u8Ig9h65Qg41IYOT189JpVo1xNxtPMVUjfC6viIb1GVvLoyT4z8gwIriReY+pyEu
-      uvfZUyjhAoGBAPPPpkV40/Ky0GBqY5Gw8B8EphqhvjmCxE+LNqlAPKNEjX8b9zKn
-      kcbWo/lJ3K4KFMYj6n8qADeHK7C0GNffX8oiGMAMLcaDUau8KNshb4/XVH+7M8EV
-      zwsgsU3EPTqZZhKwk9lgeXDk5k2xMpBFicB3kCerH+Yh7Ae6PlfPxTenAoGBAMdn
-      RfD81Y8ICp2Ws+ACeeJsO0+nezOsarl6njGjFjh0WsqXQrWkPMmm1fpW7no3QTwG
-      NKmjebmsDy1Yw44jmnlzz1XqUQ/zAWM3GkOnf0m27XeZQeYP07vUiR7vcV3sv+JF
-      vJKlnQvcFbUSNfJum7+3qWrPmUrCNhX81EhB6fkpAn8JhhL4o7+ju1hoa7938XFv
-      xL64S5kipfkFImsAMYIs3oCodm8xi1omajv9gOUd50bodn6yePGJOb57KI3P4Onc
-      +3f8CH3BQ1/tVWxDIws4kzC5zJY49KEhziUe5It/vn4+PKeJ1jroLgjRABr5h73Z
-      xtHautSEKM8PfjbxNyx9AoGBALjhi/uwsOF49z695/Ee2puQ9j0YcCatChcHFX24
-      VHXri/Ki5Hs92A6v3V3LFDnE2Xsp1dIjfE0mtru4vTgg0q0hL2/dXWOIUBUJlhR8
-      TIywSuTE+FCzBAH3QVupbldDl3XYassdOsswOAA27kXlQAs14qLh8KNcBoHEdZ65
-      XpJhAoGBAMlIKHr8B56c53Np3Fb0NAc2UcfFfftLVR8MabnMN63mqG5UYX/qks8b
-      Hy5ENFE9TXIVvuG39TA1aZD/CO+O69/Z8lZtwq3sX7vmiwCxtYmlvXCa+wr2EWAL
-      ecX6vRR057x38fQ0THAy0j1suKdcsoexBom+xaR2sbaaBNpCay17
-      -----END RSA PRIVATE KEY-----
+
 - name: monthly
   type: time
   source: 
