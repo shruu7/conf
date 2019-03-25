@@ -1,0 +1,14 @@
+---
+platform: linux
+image_resource:
+  type: docker-image
+  source:
+    repository: briandfrost/concourse-ubuntu
+    tag: latest 
+inputs:
+  - name: git-test
+  - name: confluence
+run:
+  path: git-test/aws-cert-output-py.sh
+outputs: 
+  - name: confluence
