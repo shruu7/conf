@@ -9,4 +9,4 @@ inputs:
   - name: git-test
   - name: confluence
 run:
-  path: git-test/aws-cert-output-py.sh
+  path: git-test/aws-cert-output-py-1.sh
