@@ -61,6 +61,8 @@ jobs:
       Envi: ((envi))
       inputs: 
       - name: confluence
+      outputs:
+      - name: confluence
   - task: check_expiry_date_prod
     file: git-test/aws-task.yml
     params: 
@@ -68,4 +70,6 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ((secret-access-key))
       Envi: ((envi)) 
       inputs: 
-      - name: confluence  
+      - name: confluence 
+      outputs:
+      - name: confluence 
