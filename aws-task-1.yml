@@ -10,4 +10,4 @@ inputs:
 run:
   path: git-test/aws-cert-output-py.sh
 outputs: 
-  - name: confluence
+ - name: confluence
