@@ -6,7 +6,10 @@ image_resource:
     repository: briandfrost/concourse-ubuntu
     tag: latest 
 inputs:
+  - name: git-test
   - name: confluence
+outputs:
+  - name: git-test
   - name: confluence
 run:
   path: git-test/aws-cert-output-py.sh
