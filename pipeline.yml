@@ -70,7 +70,7 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ((secret-access-key))
       Envi: prod 
       inputs:
-      - name: confluence  
-      - name: confluence    
+      - name: confluence      
+      - name: confluence
       outputs:
       - name: confluence 
