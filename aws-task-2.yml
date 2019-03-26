@@ -7,5 +7,6 @@ image_resource:
     tag: latest 
 inputs:
   - name: confluence
+  - name: git-test
 run:
   path: git-test/aws-cert-output-py.sh
