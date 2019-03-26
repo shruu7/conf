@@ -71,6 +71,5 @@ jobs:
       Envi: prod 
       inputs:
       - name: confluence      
-      - name: confluence
       outputs:
       - name: confluence 
