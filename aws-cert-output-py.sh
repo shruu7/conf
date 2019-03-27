@@ -6,3 +6,4 @@ echo "================================================================="
 echo ""
 python git-test/aws-cert.py --action=LISTEXPIRING --daysleft=90 >> test
 cat test
+ls
