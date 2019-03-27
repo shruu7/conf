@@ -4,6 +4,6 @@
 echo "List of Certificates for $Envi that are going to expire is as follows." 
 echo "=================================================================" 
 echo ""
-python git-test/aws-cert.py --action=LISTEXPIRING --daysleft=90 > test
-cat test
-ls
+test = python git-test/aws-cert.py --action=LISTEXPIRING --daysleft=90 
+echo $test >> newfile.txt
+cat newfile.txt
