@@ -1,8 +1,6 @@
 groups:
 - name: aws-checker-sandbox
   jobs: [aws-checker-sandbox]
-- name: aws-checker-nonprod
-  jobs: [aws-checker-nonprod]
 
 
 resources:
@@ -57,13 +55,10 @@ jobs:
       AWS_ACCESS_KEY_ID: ((access-key-id))
       AWS_SECRET_ACCESS_KEY: ((secret-access-key))
       Envi: sandbox
+      inputs:
+      - name: confluence
       outputs:
       - name: confluence
-- name: aws-checker-nonprod
-  plan:
-  - get: git-test
-  - get: monthly
-    trigger: true
   - task: check_expiry_date_nonprod
     file: git-test/aws-task-1.yml
     params:
