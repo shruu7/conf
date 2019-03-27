@@ -7,9 +7,8 @@ image_resource:
     tag: latest 
 inputs:
   - name: git-test
-  - name: confluencesandbox
 run:
   path: git-test/aws-cert-output-py.sh
         git-test/aws-cert-ouptu-py-1.sh
 outputs: 
-  - name: confluencenonprod
+  - name: confluencensandbox
