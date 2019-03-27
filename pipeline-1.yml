@@ -64,6 +64,6 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ((secret-access-key))
       Envi: nonprod
       inputs:
-      - name: confluencesandbox
+      - name: confluencenonprod
       outputs:
       - name: confluencenonprod
