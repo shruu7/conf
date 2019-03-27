@@ -13,7 +13,6 @@ run:
   - -exc
   - |
     git-test/aws-cert-output-py.sh >> confluencesandbox
-    cat confluencesandbox >> confluence
-    cat confluence
-    cat confluencesandbox > confluence
+    git-test/aws-cert-ouptu-py-1.sh >> confluencenonprod
+    cat confluencesandbox confluencenonprod > confluence
     cat confluence
