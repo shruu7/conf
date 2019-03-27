@@ -10,4 +10,4 @@ inputs:
 run:
   path: git-test/aws-cert-output-py-1.sh
 outputs: 
-  - name: confluence-nonprod
+  - name: confluencenonprod

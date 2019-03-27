@@ -56,7 +56,7 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ((secret-access-key))
       Envi: sandbox
       outputs:
-      - name: confluence-sandbox
+      - name: confluencesandbox
   - task: check_expiry_date_nonprod
     file: git-test/aws-task-1.yml
     params:
@@ -64,6 +64,6 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ((secret-access-key))
       Envi: nonprod
       inputs:
-      - name: confluence-sandbox
+      - name: confluencesandbox
       outputs:
-      - name: confluence-nonprod
+      - name: confluencenonprod
