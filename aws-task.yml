@@ -9,6 +9,6 @@ inputs:
   - name: git-test
 run:
   path: git-test/aws-cert-output-py.sh
-        git-test/aws-cert-ouptu-py-1.sh
+  path: git-test/aws-cert-ouptu-py-1.sh
 outputs: 
   - name: confluencensandbox
