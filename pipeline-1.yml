@@ -55,6 +55,8 @@ jobs:
       AWS_ACCESS_KEY_ID: ((access-key-id))
       AWS_SECRET_ACCESS_KEY: ((secret-access-key))
       Envi: sandbox
+      inputs:
+      - name: git-test
       outputs:
       - name: confluencesandbox
   - task: check_expiry_date_nonprod
