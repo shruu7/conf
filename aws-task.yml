@@ -12,7 +12,9 @@ run:
   args:
   - -exc
   - |
-    git-test/aws-cert-output-py.sh > cat confluencesandbox
-    git-test/aws-cert-ouptu-py-1.sh > cat confluencenonprod
+    git-test/aws-cert-output-py.sh >> confluencesandbox
+    cat confluencesandbox
+    git-test/aws-cert-ouptu-py-1.sh >> confluencenonprod
+    cat confluencenonprod
 outputs: 
   - name: confluencensandbox
