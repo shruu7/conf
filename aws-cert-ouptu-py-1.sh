@@ -1,7 +1,7 @@
 #!/bin/sh
 #!/usr/bin/env python2
 
-cp git-test/aws-cert-output-py.sh git-test/aws-cert-ouptu-py-1.sh
+cp aws-cert-output-py.sh aws-cert-ouptu-py-1.sh
 cat confluencesandbox/confluencesandbox
 echo "List of Certificates for $Envi that are going to expire is as follows." >> confluencenonprod/confluencenonprod
 echo "=================================================================" >> confluencenonprod/confluencenonprod
