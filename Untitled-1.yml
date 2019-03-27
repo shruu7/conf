@@ -1,0 +1,50 @@
+groups:
+- name: aws-checker-sandbox
+  jobs: [aws-checker-sandbox]
+- name: aws-checker-nonprod
+  jobs: [aws-checker-nonprod]
+- name: aws-checker-prod
+  jobs: [aws-checker-prod]
+
+
+resources:
+- name: git-test
+  type: git
+  source:
+    branch: master
+    uri: https://github.com/shruu7/conf.git
+    private_key: ((git_private_key))
+
+- name: monthly
+  type: time
+  source:
+    interval: 720h
+
+
+jobs:
+- name: aws-checker-sandbox
+  plan:
+  - get: git-test
+  - get: monthly
+    trigger: true
+  - task: check_expiry_date_sandbox
+    file: git-test/aws-task.yml
+    params:
+      AWS_ACCESS_KEY_ID: ((access-key-id))
+      AWS_SECRET_ACCESS_KEY: ((secret-access-key))
+      Envi: sandbox
+      outputs:
+      - name: confluence
+- name: aws-checker-nonprod
+  plan:
+  - get: git-test
+  - get: monthly
+    trigger: true
+  - task: check_expiry_date_nonprod
+    file: git-test/aws-task.yml
+    params:
+      AWS_ACCESS_KEY_ID: ((access-key-id))
+      AWS_SECRET_ACCESS_KEY: ((secret-access-key))
+      Envi: nonprod
+      outputs:
+      - name: confluence
