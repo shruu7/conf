@@ -13,3 +13,5 @@ run:
   - -exc
   - |
     ls -ltr
+    cd git-test
+    ls -ltr
