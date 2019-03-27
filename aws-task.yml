@@ -16,5 +16,3 @@ run:
     cat confluencesandbox
     git-test/aws-cert-ouptu-py-1.sh >> confluencenonprod
     cat confluencenonprod
-outputs: 
-  - name: confluencensandbox
