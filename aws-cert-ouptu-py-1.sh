@@ -1,6 +1,7 @@
 #!/bin/sh
 #!/usr/bin/env python2
 
+mv confluencesandbox/confluencesandbox
 echo "List of Certificates for $Envi that are going to expire is as follows." >> confluencenonprod/confluencenonprod
 echo "=================================================================" >> confluencenonprod/confluencenonprod
 echo "">> confluencenonprod
