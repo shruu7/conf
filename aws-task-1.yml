@@ -6,7 +6,7 @@ image_resource:
     repository: briandfrost/concourse-ubuntu
     tag: latest 
 inputs:
-  - name: git-test
+  - name: confluencesandbox
 run:
   path: git-test/aws-cert-ouptu-py-1.sh
 outputs: 
