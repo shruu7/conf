@@ -5,4 +5,4 @@ echo "List of Certificates for $Envi that are going to expire is as follows." >>
 echo "=================================================================" >> confluencesandbox/confluencesandbox
 echo "">> confluencesandbox/confluencesandbox
 python git-test/aws-cert.py --action=LISTEXPIRING --daysleft=90 >> confluencesandbox/confluencesandbox
-cat confluencesandbox/confluencesandbox >> confluence
+cat confluencesandbox/confluencesandbox
