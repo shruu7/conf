@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #!/usr/bin/env python2
 
 echo "first step" > newfile.txt
