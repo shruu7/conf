@@ -21,3 +21,4 @@ var1=$(python git-test/aws-cert.py --action=LISTEXPIRING --daysleft=90)
 echo $var1 >> newfile.txt
    
 
+cat newfile.txt
