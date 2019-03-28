@@ -16,10 +16,11 @@ elif [[ $Envi == "nonprod" ]];
 then
     echo "----second step-----" >> newfile.txt
     echo $var1 >> newfile.txt
+    file="newfile.txt"
+    while IFS= read -r line
+    do
+            # display $line or do somthing with $line
+            echo "$line"
+    done <"$file"
 fi
-file="newfile.txt"
-while IFS= read -r line
-do
-        # display $line or do somthing with $line
-        echo "$line"
-done <"$file"
+
