@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #!/usr/bin/env python2
 
 var=$(python git-test/aws-cert.py --action=LISTEXPIRING --daysleft=90)
