@@ -17,7 +17,7 @@ then
     echo "----second step-----" >> newfile.txt
     echo $var1 >> newfile.txt
 fi
-file="test.txt"
+file="newfile.txt"
 while IFS= read -r line
 do
         # display $line or do somthing with $line
