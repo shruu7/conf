@@ -16,3 +16,4 @@ elif [[ $Envi == "nonprod" ]];
 then
     echo "----second step-----" >> newfile.txt
     echo $var1 >> newfile.txt
+fi
