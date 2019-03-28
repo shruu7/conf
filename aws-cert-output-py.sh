@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #!/usr/bin/env python2
 
 var=$(python git-test/aws-cert.py --action=LISTEXPIRING --daysleft=90)
@@ -14,7 +14,7 @@ then
     echo $var >> newfile.txt
 elif [[ $Envi == "nonprod" ]];
 then
-    echo "----second step-----" >> newfile.txt
+    echo "----second step-----" >> newfile1.txt
     echo $var1 >> newfile1.txt
 fi
 cat newfile.txt
