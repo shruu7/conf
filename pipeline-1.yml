@@ -1,6 +1,6 @@
 groups:
-- name: aws-checker-sandbox
-  jobs: [aws-checker-sandbox]
+- name: aws-checker
+  jobs: [aws-checker]
 
 
 resources:
@@ -44,7 +44,7 @@ resources:
     interval: 720h
 
 jobs:
-- name: aws-checker-sandbox
+- name: aws-checker
   plan:
   - get: git-test
   - get: monthly
@@ -54,9 +54,11 @@ jobs:
     params:
       AWS_ACCESS_KEY_ID: ((access-key-id))
       AWS_SECRET_ACCESS_KEY: ((secret-access-key))
-  # - task: check_expiry_date_nonprod
-  #   file: git-test/aws-task.yml
-  #   params:
-  #     AWS_ACCESS_KEY_ID: ((access-key-id))
-  #     AWS_SECRET_ACCESS_KEY: ((secret-access-key))
-  #     Envi: nonprod
+  - task: check_expiry_date
+    file: git-test/aws-task.yml
+    params:
+      Username: ((Username-conf))
+      Password: ((Password-conf))
+      id: ((page-id-conf))
+      url: ((url-conf))
+      key: ((key-conf))
