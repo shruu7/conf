@@ -54,11 +54,3 @@ jobs:
     params:
       AWS_ACCESS_KEY_ID: ((access-key-id))
       AWS_SECRET_ACCESS_KEY: ((secret-access-key))
-  - task: check_expiry_date
-    file: git-test/aws-task.yml
-    params:
-      Username: ((Username-conf))
-      Password: ((Password-conf))
-      id: ((page-id-conf))
-      url: ((url-conf))
-      key: ((key-conf))
