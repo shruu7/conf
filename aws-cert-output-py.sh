@@ -1,6 +1,7 @@
 #!/bin/sh
 #!/usr/bin/env python2
 aws configure set region us-east-1 --profile sandbox
+echo $aws_access_key_id
 aws configure set aws_access_key_id $aws_access_key_id  --profile sandbox
 aws configure set aws_secret_access_key $aws_secret_access_key --profile sandbox
 echo "first step" > newfile.txt
