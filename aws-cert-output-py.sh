@@ -2,7 +2,7 @@
 #!/usr/bin/env python2
 aws configure set region us-east-1 --profile sandbox
 aws configure set aws_access_key_id $aws_access_key_id  --profile sandbox
-aws configure set aws_secret_access_key $secret-access-key --profile sandbox
+aws configure set aws_secret_access_key $aws_secret_access_key --profile sandbox
 echo "first step" > newfile.txt
 echo "List of Certificates for Sanbox that are going to expire is as follows." >> newfile.txt
 echo "=================================================================" >> newfile.txt
