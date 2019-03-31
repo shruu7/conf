@@ -57,4 +57,4 @@ jobs:
       Envi: sandbox
       access: (())
       secret: (())
-      envi: nonprod
+      envi: Nonprod
