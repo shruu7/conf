@@ -17,10 +17,11 @@ echo "=================================================================" >> newf
 echo "" >> newfile.txt
 export AWS_PROFILE=Nonprod; python git-test/aws-cert.py --action=LISTEXPIRING --daysleft=90 >> newfile.txt >> newfile.txt
 
+unset AWS_PROFILE
 echo "List of Certificates for Sandbox that are going to expire is as follows." >> newfile.txt
 echo "=================================================================" >> newfile.txt
 echo "" >> newfile.txt
-export AWS_PROFILE=default; python git-test/aws-cert.py --action=LISTEXPIRING --daysleft=90 >> newfile.txt
+python git-test/aws-cert.py --action=LISTEXPIRING --daysleft=90 >> newfile.txt
 
 cat newfile.txt
 
