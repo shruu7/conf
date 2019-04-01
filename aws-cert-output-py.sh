@@ -20,7 +20,7 @@ export AWS_PROFILE=Nonprod; python git-test/aws-cert.py --action=LISTEXPIRING --
 
 aws configure set region us-east-1 --profile prod
 aws configure set aws_access_key_id $accessprod  --profile prod
-aws configure set aws_secret_access_key $secretprod --profile sandbox
+aws configure set aws_secret_access_key $secretprod --profile prod
 echo "Third step" >> newfile.txt
 echo "List of Certificates for Prod that are going to expire is as follows." >> newfile.txt
 echo "=================================================================" >> newfile.txt
