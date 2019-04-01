@@ -54,7 +54,7 @@ jobs:
     params:
       AWS_ACCESS_KEY_ID: ((access-key-id))
       AWS_SECRET_ACCESS_KEY: ((secret-access-key))
-      Envi: sandbox
       access: ((access-key-id-non))
       secret: ((secret-access-key-non))
-      envi: Nonprod
+      accessprod: ((access-key-id-prod))
+      secretprod: ((secret-access-key-prod))
