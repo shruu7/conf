@@ -55,6 +55,11 @@ jobs:
       AWS_ACCESS_KEY_ID: ((access-key-id))
       AWS_SECRET_ACCESS_KEY: ((secret-access-key))
       Envi: sandbox
-      access: (())
-      secret: (())
+      access: ((access-key-id-non))
+      secret: ((secret-access-key-non))
       envi: Nonprod
+      Username: ((Username-conf))
+      Password: ((Password-conf))
+      id: ((page-id-conf))
+      url: ((url-conf))
+      key: ((key-conf))

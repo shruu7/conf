@@ -24,6 +24,4 @@ export AWS_PROFILE=$envi; python git-test/aws-cert.py --action=LISTEXPIRING --da
 #echo "=================================================================" >> newfile.txt
 #echo "" >> newfile.txt
 #python git-test/aws-cert.py --action=LISTEXPIRING --daysleft=90 >> newfile.txt
-
-
 cat newfile.txt
