@@ -58,8 +58,8 @@ jobs:
       access: ((access-key-id-non))
       secret: ((secret-access-key-non))
       envi: Nonprod
-      Username: ((Username-conf))
-      Password: ((Password-conf))
-      id: ((page-id-conf))
-      url: ((url-conf))
-      key: ((key-conf))
+      Username: ((Username))
+      Password: ((Password))
+      id: ((page))
+      url: ((url))
+      key: ((key))
