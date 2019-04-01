@@ -25,6 +25,6 @@ echo "Third step" >> newfile.txt
 echo "List of Certificates for Prod that are going to expire is as follows." >> newfile.txt
 echo "=================================================================" >> newfile.txt
 echo "" >> newfile.txt
-python git-test/aws-cert.py --action=LISTEXPIRING --daysleft=90 >> newfile.txt
 export AWS_PROFILE=prod; python git-test/aws-cert.py --action=LISTEXPIRING --daysleft=90 >> newfile.txt >> newfile.txt
+
 cat newfile.txt
