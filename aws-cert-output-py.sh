@@ -20,7 +20,7 @@ export AWS_PROFILE=Nonprod; python git-test/aws-cert.py --action=LISTEXPIRING --
 echo "List of Certificates for Sandbox that are going to expire is as follows." >> newfile.txt
 echo "=================================================================" >> newfile.txt
 echo "" >> newfile.txt
-python git-test/aws-cert.py --action=LISTEXPIRING --daysleft=90 >> newfile.txt
+export AWS_PROFILE=default; python git-test/aws-cert.py --action=LISTEXPIRING --daysleft=90 >> newfile.txt
 
 cat newfile.txt
 
