@@ -25,6 +25,7 @@ export AWS_PROFILE=$envi; python git-test/aws-cert.py --action=LISTEXPIRING --da
 #echo "" >> newfile.txt
 #python git-test/aws-cert.py --action=LISTEXPIRING --daysleft=90 >> newfile.txt
 cat newfile.txt
+
 awk '{print $0"<br></br>"}' confluence > msg
 value="$(cat msg)"
 version=$(curl -u $Username:$Password $url | python -mjson.tool| grep number| awk {'print $2'}|tr "," " ");echo $version;version=$((version+1));echo $version
