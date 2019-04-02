@@ -20,7 +20,7 @@ aws configure set aws_secret_access_key $secret --profile Nonprod
 echo "List of Certificates for Non-Prod that are going to expire is as follows." >> newfile.txt
 echo "=================================================================" >> newfile.txt
 echo "" >> newfile.txt
-export AWS_PROFILE=Noprod; python git-test/aws-cert.py --action=LISTEXPIRING --daysleft=90 >> newfile.txt >> newfile.txt
+export AWS_PROFILE=Nonprod; python git-test/aws-cert.py --action=LISTEXPIRING --daysleft=90 >> newfile.txt >> newfile.txt
 if [[ $? -ne 0 ]]
 then
     echo "Error Running python script"
