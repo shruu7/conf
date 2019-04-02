@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #!/usr/bin/env python2
 
 aws configure set region us-east-1 --profile prod
