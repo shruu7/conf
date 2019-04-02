@@ -8,6 +8,11 @@ echo "List of Certificates for Prod that are going to expire is as follows." >> 
 echo "=================================================================" >> newfile.txt
 echo "" >> newfile.txt
 export AWS_PROFILE=prod; python git-test/aws-cert.py --action=LISTEXPIRING --daysleft=90 >> newfile.txt >> newfile.txt
+if [[ $? -ne 0 ]]
+then
+    echo "Error Running python script"
+    exit 1
+fi
 
 aws configure set region us-east-1 --profile Nonprod
 aws configure set aws_access_key_id $access  --profile Nonprod
@@ -15,13 +20,23 @@ aws configure set aws_secret_access_key $secret --profile Nonprod
 echo "List of Certificates for Non-Prod that are going to expire is as follows." >> newfile.txt
 echo "=================================================================" >> newfile.txt
 echo "" >> newfile.txt
-export AWS_PROFILE=Nonprod; python git-test/aws-cert.py --action=LISTEXPIRING --daysleft=90 >> newfile.txt >> newfile.txt
+export AWS_PROFILE=Noprod; python git-test/aws-cert.py --action=LISTEXPIRING --daysleft=90 >> newfile.txt >> newfile.txt
+if [[ $? -ne 0 ]]
+then
+    echo "Error Running python script"
+    exit 1
+fi
 
 unset AWS_PROFILE
 echo "List of Certificates for Sandbox that are going to expire is as follows." >> newfile.txt
 echo "=================================================================" >> newfile.txt
 echo "" >> newfile.txt
 python git-test/aws-cert.py --action=LISTEXPIRING --daysleft=90 >> newfile.txt
+if [[ $? -ne 0 ]]
+then
+    echo "Error Running python script"
+    exit 1
+fi
 
 cat newfile.txt
 
